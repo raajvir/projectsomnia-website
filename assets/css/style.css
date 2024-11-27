@@ -9,7 +9,8 @@
 
 :root {
     --color-white: #fff;
-    --color-black: #000;
+    --color-black: #252524;
+    --color-blue: #2FB4FF;
     --color-gray: #3E3E3E;
 }
 
@@ -147,7 +148,7 @@ a {
 .somnia-heading {
     color: var(--color-white);
     font-size: 114px;
-    font-weight: 700;
+    font-weight: 900;
     line-height: 97.336%; 
     letter-spacing: -3.75px;
     margin-top: 26px;
@@ -630,12 +631,24 @@ a {
 
 .footer-part {
     text-align: end;
-    margin-top: 148px;
 }
 
 .footer-part-2 {
     text-align: end;
     margin-top: 45px;
+}
+
+.footer-main-head {
+    color: var(--color-blue);
+    text-align: right;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.footer-main-info {
+    color: var(--color-blue);
+    font-size: 20px;
+    text-align: right;
 }
 
 .footer-info {
