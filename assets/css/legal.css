@@ -1,0 +1,179 @@
+/* ==========================================================================
+   Legal pages (privacy.html, terms.html)
+
+   Loaded AFTER assets/css/style.css and additive only — it defines nothing
+   that style.css already defines, so the existing pages are unaffected. All
+   colours come from the :root variables style.css already declares.
+   ========================================================================== */
+
+#legalHero {
+    background-image: url('../images/somnia-bg-two.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 38px;
+    padding-bottom: 90px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+@media screen and (max-width: 992px) {
+    #legalHero { padding-top: 27px; padding-bottom: 60px; }
+}
+
+/* Same 700-weight, 97.336% line-height, tight-tracking treatment as
+   .project-head — just left-aligned, because these are documents. */
+.legal-head {
+    color: var(--color-white);
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 97.336%;
+    letter-spacing: -2.4px;
+    margin-top: 122px;
+}
+
+@media screen and (max-width: 1600px) { .legal-head { font-size: 84px; } }
+@media screen and (max-width: 1400px) { .legal-head { font-size: 64px; margin-top: 90px; } }
+@media screen and (max-width: 768px)  { .legal-head { font-size: 38px; margin-top: 64px; } }
+
+.legal-updated {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    margin-top: 20px;
+}
+
+#legalBody {
+    background-color: #0a0a0a;
+    padding: 80px 0 120px;
+}
+
+@media screen and (max-width: 768px) { #legalBody { padding: 54px 0 80px; } }
+
+.legal-toc {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    padding: 26px 30px;
+    margin-bottom: 56px;
+}
+
+.legal-toc h2 {
+    font-size: 12px;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    font-weight: 400;
+    margin-bottom: 14px;
+}
+
+.legal-toc ol { margin: 0 0 0 20px; }
+.legal-toc li { margin-bottom: 7px; }
+.legal-toc a { color: rgba(255, 255, 255, 0.75); font-size: 15px; }
+.legal-toc a:hover { color: var(--color-blue); text-decoration: underline; }
+
+.legal-content h2 {
+    color: var(--color-white);
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.9px;
+    line-height: 1.2;
+    margin: 54px 0 16px;
+    /* Anchor links from the table of contents shouldn't land the heading
+       flush against the top of the viewport. */
+    scroll-margin-top: 30px;
+}
+
+.legal-content h2:first-child { margin-top: 0; }
+
+@media screen and (max-width: 768px) { .legal-content h2 { font-size: 23px; } }
+
+.legal-content p,
+.legal-content li {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    line-height: 1.75;
+    max-width: 74ch;
+}
+
+.legal-content p { margin-bottom: 16px; }
+.legal-content ul,
+.legal-content ol { margin: 0 0 20px 22px; }
+.legal-content li { margin-bottom: 9px; }
+.legal-content strong { color: rgba(255, 255, 255, 0.95); font-weight: 700; }
+
+.legal-content a {
+    color: var(--color-blue);
+    text-decoration: underline;
+}
+
+.legal-callout {
+    border-left: 3px solid var(--color-blue);
+    background: rgba(47, 180, 255, 0.08);
+    padding: 20px 26px;
+    border-radius: 0 12px 12px 0;
+    margin: 28px 0;
+}
+
+.legal-callout p:last-child { margin-bottom: 0; }
+
+.legal-table-wrap { overflow-x: auto; margin-bottom: 26px; }
+
+.legal-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Forces a horizontal scroll inside .legal-table-wrap on narrow screens
+       rather than letting the table squash the page wider than the viewport. */
+    min-width: 560px;
+}
+
+.legal-table th,
+.legal-table td {
+    text-align: left;
+    padding: 13px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    font-size: 15px;
+    line-height: 1.6;
+    vertical-align: top;
+}
+
+.legal-table th {
+    color: var(--color-blue);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.legal-table td { color: rgba(255, 255, 255, 0.7); }
+
+/* Footer link row, also added to index.html and project-somnia.html. */
+.legal-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    padding-top: 26px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.legal-links a,
+.legal-links span {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
+
+.legal-links a:hover { color: var(--color-blue); }
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 12px 20px;
+    background: var(--color-blue);
+    color: var(--color-black);
+    font-weight: 700;
+}
+
+.skip-link:focus { left: 16px; top: 16px; }
